@@ -18,7 +18,7 @@ def read_first_lines(input_path, num_lines):
                 if os.path.isfile(file_path):
                     print(f"{file_name}:")
                     try:
-                        df = pd.read_csv(file_path, header=None, nrows=6)
+                        df = pd.read_csv(file_path, header=None, nrows=6, sep='\t')
                         print(df.head(6).to_string(index=False, header=False))
                     except:
                         with open(file_path, 'r') as file:
